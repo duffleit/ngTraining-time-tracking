@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { TimeRecord } from '../models/time-record.model';
 
 @Component({
   selector: 'app-create-time-record',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-time-record.component.scss']
 })
 export class CreateTimeRecordComponent {
+  @Output()
+  public create: EventEmitter<TimeRecord> = new EventEmitter<TimeRecord>();
+
   public hours = '1';
   public description = '';
 
   public clickedButton(): void {
-    this.hours = 'delete';
+    const newTimeRecord = { description: this.description, hours: this.hours };
+    this.create.emit(newTimeRecord);
   }
 
   public get buttonIsDisabled(): boolean {

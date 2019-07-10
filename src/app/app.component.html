@@ -2,6 +2,7 @@
 <div class="root">
   <h1>Time Tracking</h1>
   <div class="content">
-    <app-create-time-record></app-create-time-record>
+    <app-create-time-record (create)="addRecord($event)"></app-create-time-record>
+    <app-time-record *ngFor="let record of records" [record]="record"></app-time-record>
   </div>
 </div>
