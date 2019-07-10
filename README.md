@@ -1,27 +1,36 @@
-# NgTrainingTimeTracking
+# Essentials - Time Tracking
+
+This exercise teaches the essentials and basic concepts of Angular. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
 
-## Development server
+## Tasks
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The tasks of this exercise are very abstract, as the solution approach is mainly driven by the needs and experiences of the workshop group. Thus this exercise is somehow special, as it acts more as a playground, then a typical recipe as the other ngTraining-exercises. 
 
-## Code scaffolding
+### A Possible implementation flow could be: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Create simple inputs that allow the user to enter a first time-record with a `description` and `hours`. Use the template-driven approach with `[(ngModel)]` to achieve this.
 
-## Build
+2. Create a component which renders the time-records.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+3. Create a service which stores and manages the time-records. 
 
-## Running unit tests
+4. Add projects to the time-record and allow the user to select them. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. A dedicated route should be created which allows the user to update the projects. 
 
-## Running end-to-end tests
+6. Pagination should be added to the time-record list. 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+7. Save and fetch the data by the usage of a _real_ HTTP-server. 
 
-## Further help
+8. Add a directive to format the hours correctly. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+9. Allow the user to delete records. 
+
+10. Move the time-records form to a dedicated page and use the reactive-form. 
+
+10. Make all subpages (time-records, projects) lazy-loaded. 
+
+11. Replace the Http-Connection with a Mock-Implementation based on the Environment settings. 
+
