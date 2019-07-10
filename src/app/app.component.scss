@@ -15,14 +15,10 @@
     margin: 0;
   }
 
-  .content{
-      padding: 2rem;
-      min-height: 400px;
-      border: 1px dashed grey;
-      border-radius: 5px;
-
-      .row{
-        padding-bottom: .5rem;
-      }
+  .content {
+    padding: 2rem;
+    min-height: 400px;
+    border: 1px dashed grey;
+    border-radius: 5px;
   }
 }

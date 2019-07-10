@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <label class="col-4">Hours:</label>
+    <input [(ngModel)]="hours" class="form-control col-8" />
+  </div>
+  <div class="row">
+    <label class="col-4">Description:</label>
+    <input [(ngModel)]="description" class="form-control col-8" />
+  </div>
+  <div class="button-line row">
+    <span class="align-middle">You are about to log {{ hours }} hours.&nbsp;</span>
+    <button [disabled]="buttonIsDisabled" (click)="clickedButton()" class="btn btn-primary">Add</button>
+  </div>
+</div>
