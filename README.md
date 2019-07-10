@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Create a simple input that allows the user to enter a first time-record with description and hours. Use the template-driven approach with with `[(ngModel)]`.
 
+1. Add bootstrap to your project with `npm i -s bootstrap` and add it to the style-assets in your `angular.json`. Add the `form-control` class to your inputs to make them look (more) beautiful.
+
 2. Create a component which renders the time-records.
 
 3. Create a service which stores and manages the time-records. 
