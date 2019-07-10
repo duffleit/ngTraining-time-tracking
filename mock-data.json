@@ -1,0 +1,24 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "hours": "5",
+      "description": "mathe-hü"
+    },
+    {
+      "id": 2,
+      "hours": "3",
+      "description": "hund gasse"
+    },
+    {
+      "id": 3,
+      "hours": "2",
+      "description": "gitarre"
+    },
+    {
+      "id": 4,
+      "hours": "4",
+      "description": "handy repapiert"
+    }
+  ]
+}
