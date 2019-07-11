@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TimeRecord } from './models/time-record.model';
 import { RecordClient } from './clients/record.client';
+import { Observable } from 'rxjs';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { RecordClient } from './clients/record.client';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private recordClient: RecordClient) {}
+  constructor(private recordClient: RecordClient) { }
 
   public records: TimeRecord[] = [
     { hours: '5', description: 'mathe-hü' },
@@ -17,7 +19,7 @@ export class AppComponent {
   ];
 
   public addRecord(record: TimeRecord): void {
-    // this.records.push(record);
-    this.recordClient.save(record);
+    this.recordClient.save(record)
+      .subscribe(r => this.records.push(r));
   }
 }
