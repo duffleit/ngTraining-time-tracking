@@ -16,9 +16,19 @@
       "description": "gitarre"
     },
     {
-      "id": 4,
       "hours": "4",
-      "description": "handy repapiert"
+      "description": "handy repapiert",
+      "id": 4
+    },
+    {
+      "description": "dsfasdf",
+      "hours": "1",
+      "id": 5
+    },
+    {
+      "description": "Cool",
+      "hours": "42",
+      "id": 6
     }
   ]
 }

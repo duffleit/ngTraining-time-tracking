@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { TimeRecord } from '../models/time-record.model';
+import { TimeRecord } from '../../models/time-record.model';
 
 @Component({
   selector: 'app-create-time-record',
