@@ -10,15 +10,15 @@ export class CreateTimeRecordComponent {
   @Output()
   public create: EventEmitter<TimeRecord> = new EventEmitter<TimeRecord>();
 
-  public hours = '1';
+  public hours = '';
   public description = '';
 
   public clickedButton(): void {
-    const newTimeRecord = { description: this.description, hours: this.hours };
-    this.create.emit(newTimeRecord);
-  }
+    const splittedHours = this.hours.split(':');
+    const hours = parseInt(splittedHours[0], 10);
+    const minutes = hours * 60 + parseInt(splittedHours[1], 10);
 
-  public get buttonIsDisabled(): boolean {
-    return !parseInt(this.hours, 10);
+    const newTimeRecord = { description: this.description, minutes };
+    this.create.emit(newTimeRecord);
   }
 }

@@ -6,16 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateTimeRecordComponent } from './components/create-time-record/create-time-record.component';
 import { TimeRecordComponent } from './components/time-record/time-record.component';
-import { RecordClient } from './clients/record.client';
+import { HttpRecordClient } from './clients/record.client';
+import { HoursDirective } from './components/create-time-record/hours.directive';
+import { RECORD_CLIENT, RecordClient, MeinLusterInjectionToken, API_ENDPOINT } from './tokens';
+import { environment } from 'src/environments/environment.prod';
+import { MockRecordClient } from './clients/record.client.mock';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateTimeRecordComponent,
-    TimeRecordComponent
+    TimeRecordComponent,
+    HoursDirective
   ],
   providers: [
-    RecordClient
+    { provide: API_ENDPOINT, useValue: 'http://hukcobrug.com' },
+    { provide: RECORD_CLIENT, useClass: environment.mocked ? MockRecordClient : HttpRecordClient }
   ],
   imports: [
     BrowserModule,

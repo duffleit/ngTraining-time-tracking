@@ -10,4 +10,11 @@
 
 .row {
   padding-bottom: 0.5rem;
+
+  .error{
+    color: red;
+    font-size: 0.8rem;
+    text-align: right;
+    padding: 0;
+  }
 }

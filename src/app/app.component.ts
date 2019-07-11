@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Inject } from '@angular/core';
 import { TimeRecord } from './models/time-record.model';
-import { RecordClient } from './clients/record.client';
-import { Observable } from 'rxjs';
-import { DatePipe } from '@angular/common';
+import { RECORD_CLIENT, RecordClient, API_ENDPOINT } from './tokens';
+import { HttpRecordClient } from './clients/record.client';
+import { MockRecordClient } from './clients/record.client.mock';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,12 @@ export class AppComponent implements OnInit {
 
   public records: TimeRecord[] = [];
 
-  constructor(private recordClient: RecordClient) { }
+  constructor(
+    @Inject(API_ENDPOINT) private endpoint: string,
+    @Inject(RECORD_CLIENT) private recordClient: RecordClient,
+  ) {
+    console.log(endpoint);
+  }
 
   public ngOnInit(): void {
     this.recordClient.get()

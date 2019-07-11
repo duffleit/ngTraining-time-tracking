@@ -1,14 +1,23 @@
-<div class="container">
+<form class="container" #form="ngForm" hours>
   <div class="row">
     <label class="col-4">Hours:</label>
-    <input [(ngModel)]="hours" class="form-control col-8" />
+    <input name="hours" [(ngModel)]="hours" class="form-control col-8" required hours/>
+    <ng-container *ngIf="form?.controls['hours']?.touched">
+      <div class="error col-12" *ngIf="form?.controls['hours']?.hasError('required')">Feld muss angegeben sein.</div>
+      <div class="error col-12" *ngIf="form?.controls['hours']?.hasError('hours')">Das Format der Stunden ist ungültig.</div>
+    </ng-container>
   </div>
   <div class="row">
     <label class="col-4">Description:</label>
-    <input [(ngModel)]="description" class="form-control col-8" />
+    <input name="description" [(ngModel)]="description" class="form-control col-8" required maxlength="120" minlength="10" />
+    <ng-container *ngIf="form?.controls['description']?.touched">
+      <div class="error col-12" *ngIf="form?.controls['description']?.hasError('required')">Feld muss angegeben sein.</div>
+      <div class="error col-12" *ngIf="form?.controls['description']?.hasError('maxlength')">Maximallänge wurde überschritten.</div>
+      <div class="error col-12" *ngIf="form?.controls['description']?.hasError('minlength')">Minimallänge wurde unterschritten.</div>
+    </ng-container>
   </div>
   <div class="button-line row">
     <span class="align-middle">You are about to log {{ hours }} hours.&nbsp;</span>
-    <button [disabled]="buttonIsDisabled" (click)="clickedButton()" class="btn btn-primary">Add</button>
+    <button [disabled]="form?.invalid" (click)="clickedButton()" class="btn btn-primary">Add</button>
   </div>
-</div>
+</form>

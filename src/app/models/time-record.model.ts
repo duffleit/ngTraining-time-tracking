@@ -1,4 +1,4 @@
 export interface TimeRecord {
     description: string;
-    hours: string;
+    minutes: number;
 }
