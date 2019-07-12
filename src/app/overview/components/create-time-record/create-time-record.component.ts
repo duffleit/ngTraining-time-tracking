@@ -60,13 +60,10 @@ export class CreateTimeRecordComponent implements OnInit {
 
 
   public clickedButton(): void {
-    /*
-    const splittedHours = this.hours.split(':');
-    const hours = parseInt(splittedHours[0], 10);
-    const minutes = hours * 60 + parseInt(splittedHours[1], 10);
-
-    const newTimeRecord = { description: this.description, minutes };
+    const description = this.description.value;
+    const minutes = CreateTimeRecordComponent.getMinutes(this.hours.value);
+    const newTimeRecord = { description, minutes };
     this.create.emit(newTimeRecord);
-    */
+
   }
 }

@@ -5,6 +5,7 @@ import { CreateTimeRecordComponent } from './components/create-time-record/creat
 import { TimeRecordComponent } from './components/time-record/time-record.component';
 import { HoursDirective } from './components/create-time-record/hours.directive';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HoursDirective
   ],
   imports: [
+    SharedModule,
     CommonModule,
     ReactiveFormsModule
   ],

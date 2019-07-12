@@ -1,8 +1,10 @@
 <div *ngIf="timeRecord$ | async as timeRecord" class="root">
-    <div><b>{{timeRecord.description}}:</b></div>
-    <div>{{timeRecord.minutes}}</div>
+  <div>
+    <b>{{ timeRecord.description }}:</b>
+  </div>
+  <div>{{ timeRecord.minutes | hours }}</div>
 
-    <div>
-        <button class="btn btn-danger" (click)="deleteRecord()">Delete</button>
-    </div>
+  <div>
+    <button class="btn btn-danger" (click)="deleteRecord()">Delete</button>
+  </div>
 </div>
