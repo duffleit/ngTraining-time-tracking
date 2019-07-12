@@ -1,11 +1,6 @@
 {
   "records": [
     {
-      "id": 1,
-      "minutes": 300,
-      "description": "mathe-hü"
-    },
-    {
       "id": 2,
       "minutes": 180,
       "description": "hund gasse"

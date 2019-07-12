@@ -2,9 +2,7 @@
 <div class="root">
   <h1>Time Tracking</h1>
   <div class="content">
-    <app-create-time-record (create)="addRecord($event)"></app-create-time-record>
-    <div *ngIf="loadingState.loadRecords">loading records...</div>
-    <div *ngIf="loadingState.saveRecord">saving record...</div>
-    <app-time-record *ngFor="let record of records" [record]="record"></app-time-record>
+    <app-overview></app-overview>
+    <app-detail [id]="'2'"></app-detail>
   </div>
 </div>

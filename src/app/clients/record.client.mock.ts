@@ -12,10 +12,18 @@ export class MockRecordClient implements RecordClient {
         return of({ ...record });
     }
 
-    public get(): Observable<TimeRecord[]> {
+    public getAll(): Observable<TimeRecord[]> {
         return of([
             { minutes: 120, description: 'mathe hü' },
             { minutes: 240, description: 'französisch hü' },
         ]);
+    }
+
+    public get(id: number): Observable<TimeRecord> {
+        return of({ minutes: 120, description: 'mathe hü' });
+    }
+
+    public delete(id: number): Observable<void> {
+        return of();
     }
 }
