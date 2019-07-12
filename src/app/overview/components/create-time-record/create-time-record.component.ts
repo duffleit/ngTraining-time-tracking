@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { TimeRecord } from '../../models/time-record.model';
+import { TimeRecord } from '../../../models/time-record.model';
 import { FormGroup, FormControl, Validators, AbstractControl, ValidatorFn, ValidationErrors } from '@angular/forms';
 import { hoursValidator } from './hours.validatorfn';
 

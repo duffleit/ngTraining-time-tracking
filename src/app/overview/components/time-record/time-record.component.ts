@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TimeRecord } from '../../models/time-record.model';
+import { TimeRecord } from '../../../models/time-record.model';
 
 @Component({
   selector: 'app-time-record',
