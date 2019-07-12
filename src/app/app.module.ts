@@ -8,7 +8,7 @@ import { CreateTimeRecordComponent } from './components/create-time-record/creat
 import { TimeRecordComponent } from './components/time-record/time-record.component';
 import { HttpRecordClient } from './clients/record.client';
 import { HoursDirective } from './components/create-time-record/hours.directive';
-import { RECORD_CLIENT, RecordClient, MeinLusterInjectionToken, API_ENDPOINT } from './tokens';
+import { RECORD_CLIENT, API_ENDPOINT } from './tokens';
 import { environment } from 'src/environments/environment.prod';
 import { MockRecordClient } from './clients/record.client.mock';
 

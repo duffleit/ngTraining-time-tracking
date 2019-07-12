@@ -14,8 +14,8 @@ export class MockRecordClient implements RecordClient {
 
     public get(): Observable<TimeRecord[]> {
         return of([
-            { hours: "2", description: "mathe hü" },
-            { hours: "4", description: "französisch hü" },
+            { minutes: 120, description: 'mathe hü' },
+            { minutes: 240, description: 'französisch hü' },
         ]);
     }
 }
