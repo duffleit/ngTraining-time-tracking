@@ -21,4 +21,16 @@
     border: 1px dashed grey;
     border-radius: 5px;
   }
+
+  .navigation{
+    text-align: center;
+    background: lightgray;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: .5rem;
+
+    span{
+      cursor: pointer;
+    }
+  }
 }

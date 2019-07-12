@@ -9,4 +9,8 @@ import { TimeRecord } from '../../../models/time-record.model';
 export class TimeRecordComponent {
   @Input()
   public record: TimeRecord;
+
+  public get route(): string {
+    return this.record.id + '';
+  }
 }

@@ -62,7 +62,7 @@ export class CreateTimeRecordComponent implements OnInit {
   public clickedButton(): void {
     const description = this.description.value;
     const minutes = CreateTimeRecordComponent.getMinutes(this.hours.value);
-    const newTimeRecord = { description, minutes };
+    const newTimeRecord = { id: null, description, minutes };
     this.create.emit(newTimeRecord);
 
   }

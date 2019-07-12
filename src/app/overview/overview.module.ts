@@ -6,6 +6,7 @@ import { TimeRecordComponent } from './components/time-record/time-record.compon
 import { HoursDirective } from './components/create-time-record/hours.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,12 @@ import { SharedModule } from '../shared/shared.module';
     HoursDirective
   ],
   imports: [
+    RouterModule.forChild([
+      { path: '', component: OverviewComponent }
+    ]),
     SharedModule,
     CommonModule,
     ReactiveFormsModule
-  ],
-  exports: [
-    OverviewComponent
   ]
 })
 export class OverviewModule { }

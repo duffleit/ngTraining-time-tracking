@@ -14,13 +14,13 @@ export class MockRecordClient implements RecordClient {
 
     public getAll(): Observable<TimeRecord[]> {
         return of([
-            { minutes: 120, description: 'mathe hü' },
-            { minutes: 240, description: 'französisch hü' },
+            { id: 1, minutes: 120, description: 'mathe hü' },
+            { id: 2, minutes: 240, description: 'französisch hü' },
         ]);
     }
 
     public get(id: number): Observable<TimeRecord> {
-        return of({ minutes: 120, description: 'mathe hü' });
+        return of({ id: 1, minutes: 120, description: 'mathe hü' });
     }
 
     public delete(id: number): Observable<void> {

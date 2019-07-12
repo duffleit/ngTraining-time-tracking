@@ -10,18 +10,17 @@ import { environment } from 'src/environments/environment.prod';
 import { MockRecordClient } from './clients/record.client.mock';
 import { OverviewModule } from './overview/overview.module';
 import { DetailsModule } from './details/details.module';
+import { CustomPreloadingStrategy } from './preoloading.strategy';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   providers: [
+    CustomPreloadingStrategy,
     { provide: RECORD_CLIENT, useClass: environment.mocked ? MockRecordClient : HttpRecordClient }
   ],
-  imports: [
-    OverviewModule,
-    DetailsModule,
-
+  imports: [    
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
