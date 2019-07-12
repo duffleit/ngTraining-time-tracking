@@ -4,7 +4,7 @@ import { Validator, AbstractControl, ValidationErrors, NG_VALIDATORS, FormContro
 @Directive({
     selector: 'input[hours]',
     providers: [
-        { provide: NG_VALIDATORS, useClass: HoursDirective, multi: true }
+        { provide: NG_VALIDATORS, useExisting: HoursDirective, multi: true }
     ]
 })
 export class HoursDirective implements Validator {
